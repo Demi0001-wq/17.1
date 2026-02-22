@@ -1,0 +1,56 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.flakes8
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyCharm/IDE
+.idea/
+.vscode/
+
+# Environment variables
+.env
+.venv
+venv/
+ENV/
+
+# Testing/Coverage
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Local/Temporary
+*.log
+*.txt
+*.webp
+*.mp4
+!README.md
+!task.md
+!implementation_plan*.md
+!walkthrough.md
+!test_magic.py
+!test_inheritance.py
+!test_encapsulation.py
+!test_homework_16_2.py
