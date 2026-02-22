@@ -1,7 +1,7 @@
 from typing import Any, Optional
 from src.base_product import BaseProduct
 from src.print_mixin import PrintMixin
-from src.exceptions import ZeroQuantityException
+
 
 
 class Product(PrintMixin, BaseProduct):
@@ -20,7 +20,7 @@ class Product(PrintMixin, BaseProduct):
         :param quantity: Quantity in stock (int)
         """
         if quantity == 0:
-            raise ZeroQuantityException()
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
         self.name = name
         self.description = description
         self.__price = price

@@ -15,3 +15,9 @@ def test_product_init() -> None:
     assert product.description == description
     assert product.price == price
     assert product.quantity == quantity
+
+
+def test_product_zero_quantity() -> None:
+    """Test that ValueError is raised when quantity is 0."""
+    with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
+        Product("Test", "Desc", 100.0, 0)
