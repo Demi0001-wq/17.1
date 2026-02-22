@@ -1,6 +1,6 @@
 from src.base_category import BaseCategory
 from src.product import Product
-from src.exceptions import ZeroQuantityException
+
 
 
 class Category(BaseCategory):
@@ -49,18 +49,18 @@ class Category(BaseCategory):
         """
         Add a product to the category and increment the class product counter.
         Only Product or its descendants can be added.
-        Raises ZeroQuantityException if quantity is 0.
+        Raises ValueError if quantity is 0.
         """
         if not isinstance(product, Product):
             raise TypeError("Only products or their subclasses can be added to a category.")
         
         if product.quantity == 0:
-            raise ZeroQuantityException()
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
             
         self.__products.append(product)
         Category.product_count += 1
 
-    def average_price(self) -> float:
+    def middle_price(self) -> float:
         """
         Calculates the average price of all products in the category.
         Returns 0 if the category has no products.
